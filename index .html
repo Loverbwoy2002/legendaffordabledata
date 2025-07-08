@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Buy affordable data bundles for MTN, AirtelTigo, and Telecel in Ghana">
+  <title>Affordable Data Bundle - Cheap Mobile Data Plans in Ghana</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Base Styles */
+    body {
+      font-family: sans-serif;
+      background-color: #f3f4f6;
+    }
+
+    /* Header Styles */
+    .header {
+      background-color: #1407ca;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-img {
+      height: 50px;
+      width: auto;
+      animation: rotate 5s linear infinite;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+        
+    
+    .logo-text {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .nav-link {
+      color: white;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      padding: 0.5rem;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    .nav-icon {
+      margin-right: 0.25rem;
+    }
+
+    .cart-count {
+      background-color: #ef4444;
+      color: white;
+      font-size: 0.75rem;
+      border-radius: 9999px;
+      height: 1.25rem;
+      width: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0.25rem;
+    }
+
+    /* Main Content Styles */
+    .main {
+      padding: 1rem;
+      max-width: 72rem;
+      margin: 0 auto;
+    }
+
+    .main-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .alert {
+      background-color: #fee2e2;
+      border-left: 4px solid #ef4444;
+      color: #b91c1c;
+      padding: 0.75rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .alert-icon {
+      margin-right: 0.5rem;
+      margin-top: 0.25rem;
+    }
+
+    .alert-text {
+      font-size: 0.875rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 0.5rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .card-image {
+      width: 100%;
+      height: 12rem;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-description {
+      color: #4b5563;
+      font-size: 0.875rem;
+    }
+
+    .card-button {
+      margin-top: 0.75rem;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .card-button.mtn {
+      background-color: #e2b72b;
+    }
+
+    .card-button.mtn:hover {
+      background-color: #b48d0e;
+    }
+
+    .card-button.airteltigo {
+      background-color: #dc2626;
+    }
+
+    .card-button.airteltigo:hover {
+      background-color: #b91c1c;
+    }
+
+    .card-button.bigtime {
+      background-color: #2d01f0;
+    }
+
+    .card-button.bigtime:hover {
+      background-color: #030563;
+    }
+
+    .card-button.telecel {
+      background-color: #d6002e;
+    }
+
+    .card-button.telecel:hover {
+      background-color: #640005;
+    }
+
+    /* Footer Styles */
+    .footer {
+      background-color: #2004be;
+      color: white;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .footer-content {
+      max-width: 72rem;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .footer-section {
+      margin-bottom: 1rem;
+    }
+
+    .footer-title {
+      font-weight: bold;
+      font-size: 1.125rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-text {
+      color: #ffffff;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-link {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .footer-link:hover {
+      color: white;
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      color: #ffffff;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-icon {
+      margin-right: 0.5rem;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #a8a8a8;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      text-align: center;
+      color: #9ca3af;
+    }
+
+    /* Responsive Styles */
+    @media (min-width: 640px) {
+      .header {
+        flex-direction: row;
+      }
+      
+      .logo {
+        margin-bottom: 0;
+      }
+      
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      
+      .main {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <img src="legend-logo.png" alt="Legend Affordable Data Logo" class="logo-img">
+      <h1 class="logo-text">Legend Affordable Data</h1>
+    </div>
+    <nav class="nav">
+      <a href="#" class="nav-link">
+        <i class="fas fa-home nav-icon"></i> Home
+      </a>
+      <a href="#" class="nav-link">
+        <i class="fas fa-shopping-cart nav-icon"></i> Cart
+        <span class="cart-count">0</span>
+      </a>
+      <a href="#" class="nav-link">
+        <i class="fas fa-credit-card nav-icon"></i> Checkout
+      </a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <h2 class="main-title">Buy Affordable Data Bundles</h2>
+    
+    <div class="alert">
+      <i class="fas fa-exclamation-circle alert-icon"></i>
+      <p class="alert-text">* Doesn't work for Turbonet SIM.</p>
+    </div>
+
+    <div class="grid">
+      <!-- MTN Card -->
+      <div class="card">
+        <img src="MTN.png" alt="MTN Data Bundles" class="card-image" loading="lazy">
+        <div class="card-content">
+          <h3 class="card-title">MTN Data</h3>
+          <p class="card-description">Affordable MTN data packages</p>
+          <a href="MTN.html" class="card-button mtn">
+            Buy Now
+          </a>
+        </div>
+      </div>
+
+      <!-- AirtelTigo Card -->
+      <div class="card">
+        <img src="AirtelTigo-Logo.png" alt="AirtelTigo Data Bundles" class="card-image" loading="lazy">
+        <div class="card-content">
+          <h3 class="card-title">AirtelTigo Data</h3>
+          <p class="card-description">Cheap AirtelTigo internet bundles</p>
+          <a href="AirtelTigo.html" class="card-button airteltigo">
+            Buy Now
+          </a>
+        </div>
+      </div>
+
+      <!-- BigTime Card -->
+      <div class="card">
+        <img src="Bigtime Data.jpg" alt="AirtelTigo BigTime Bundles" class="card-image" loading="lazy">
+        <div class="card-content">
+          <h3 class="card-title">AirtelTigo BigTime</h3>
+          <p class="card-description">Night and weekend data bundles</p>
+          <a href="Bigtime.html" class="card-button bigtime">
+            Buy Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Telecel Card -->
+      <div class="card">
+        <img src="Telecel.png" alt="Telecel Data Bundles" class="card-image" loading="lazy">
+        <div class="card-content">
+          <h3 class="card-title">Telecel Data</h3>
+          <p class="card-description">Budget-friendly Telecel packages</p>
+          <a href="Telecel.html" class="card-button telecel">
+            Buy Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3 class="footer-title">Affordable Data</h3>
+        <p class="footer-text">Your trusted partner for cheap data bundles in Ghana.</p>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-title">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">Home</a></li>
+          <li><a href="#" class="footer-link">About Us</a></li>
+          <li><a href="#" class="footer-link">Contact</a></li>
+          <li><a href="#" class="footer-link">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-title">Contact Us</h3>
+        <ul class="footer-contact">
+          <li class="contact-item"><i class="fas fa-phone-alt contact-icon"></i> +233 0592867090</li>
+          <li class="contact-item"><i class="fas fa-envelope contact-icon"></i> williambaahwiredu8@gmail.com</li>
+          <li class="contact-item"><i class="fas fa-map-marker-alt contact-icon"></i> Amasaman - Accra</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Affordable Data. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

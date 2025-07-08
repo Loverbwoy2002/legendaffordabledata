@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en-GH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Buy affordable Telecel data bundles in Ghana at the best prices with instant delivery.">
+  <meta name="theme-color" content="#1407ca">
+  <title>Legend Affordable Data - Cheap Telecel Bundles in Ghana</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="favicon.png" loading="lazy">
+  <link rel="manifest" href="manifest.json">
+  <style>
+    /* Base Styles */
+    :root {
+      --primary-color: #af1e19;
+      --secondary-color: #10b981;
+      --danger-color: #ef4444;
+      --warning-color: #f59e0b;
+      --telecel-red: #ff0000;
+      --light-bg: #f3f4f6;
+      --dark-text: #1f2937;
+      --light-text: #6b7280;
+      --border-color: #e5e7eb;
+      --spacing-xs: 0.25rem;
+      --spacing-sm: 0.5rem;
+      --spacing-md: 1rem;
+      --spacing-lg: 1.5rem;
+      --spacing-xl: 2rem;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--dark-text);
+      line-height: 1.6;
+    }
+    
+    /* Header */
+    .header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: var(--spacing-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    
+    .logo-img {
+      height: 40px;
+      width: auto;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .logo-text {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin: 0;
+      color: white;
+    }
+    
+    nav.nav {
+      display: flex;
+      gap: var(--spacing-lg);
+    }
+    
+    .nav-link {
+      color: white;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      padding: var(--spacing-sm);
+      position: relative;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover, .nav-link:focus {
+      transform: translateY(-2px);
+      outline: 2px solid white;
+    }
+    
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: white;
+      border-radius: 3px;
+    }
+    
+    .cart-count {
+      background-color: var(--danger-color);
+      color: white;
+      font-size: 0.75rem;
+      border-radius: 9999px;
+      height: 1.25rem;
+      width: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: var(--spacing-xs);
+    }
+    
+    /* Notification Banner */
+    .notification-banner {
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 0.75rem;
+      font-size: 0.9rem;
+      position: relative;
+    }
+    
+    .notification-banner .close-btn {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    
+    /* Main Content */
+    .main {
+      padding: var(--spacing-xl) var(--spacing-md);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .page {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .page.active {
+      display: block;
+    }
+    
+    /* Network Selector */
+    .network-selector {
+      display: flex;
+      gap: var(--spacing-sm);
+      margin-bottom: var(--spacing-lg);
+      overflow-x: auto;
+      padding-bottom: var(--spacing-sm);
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .network-btn {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    
+    .network-btn.active {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .network-btn.telecel {
+      background-color: var(--telecel-red);
+      color: white;
+    }
+    
+    /* Product Card */
+    .product-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      padding: var(--spacing-lg);
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .product-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: var(--spacing-sm);
+      color: var(--primary-color);
+    }
+    
+    .product-price-range {
+      font-size: 1.1rem;
+      color: var(--light-text);
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    /* Data Size Selection */
+    .size-selection {
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .size-title {
+      font-weight: 600;
+      margin-bottom: var(--spacing-md);
+      display: flex;
+      align-items: center;
+    }
+    
+    .required-star {
+      color: var(--danger-color);
+      margin-left: var(--spacing-xs);
+    }
+    
+    .size-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 0.75rem;
+    }
+    
+    .size-btn {
+      border: 2px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.75rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      background-color: white;
+    }
+    
+    .size-btn:hover, .size-btn:focus {
+      border-color: var(--primary-color);
+      outline: none;
+    }
+    
+    .size-btn.selected {
+      border-color: var(--primary-color);
+      background-color: rgba(20, 7, 202, 0.1);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+    
+    .error-message {
+      color: var(--danger-color);
+      font-size: 0.875rem;
+      margin-top: var(--spacing-sm);
+      display: none;
+    }
+    
+    /* Price Display */
+    .price-display {
+      background-color: rgba(245, 158, 11, 0.1);
+      border-left: 4px solid var(--warning-color);
+      padding: var(--spacing-md);
+      margin-bottom: var(--spacing-xl);
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .price-amount {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--dark-text);
+    }
+    
+    .delivery-time {
+      font-size: 0.875rem;
+      color: var(--light-text);
+    }
+    
+    /* Form Input */
+    .form-group {
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .form-label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .phone-input-group {
+      display: flex;
+      max-width: 400px;
+    }
+    
+    .phone-prefix {
+      padding: 0.75rem 1rem;
+      background-color: var(--light-bg);
+      border: 1px solid #d1d5db;
+      border-right: none;
+      border-radius: 8px 0 0 8px;
+      font-weight: 500;
+    }
+    
+    .phone-input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0 8px 8px 0;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+    
+    .phone-input:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(20, 7, 202, 0.1);
+    }
+    
+    /* Action Buttons */
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--spacing-md) var(--spacing-xl);
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    .btn-primary:hover, .btn-primary:focus {
+      background-color: #ff9100;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(20, 7, 202, 0.2);
+      outline: none;
+    }
+    
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+    
+    .btn-secondary {
+      background-color: white;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+    }
+    
+    .btn-secondary:hover, .btn-secondary:focus {
+      background-color: rgba(20, 7, 202, 0.05);
+      transform: translateY(-2px);
+      outline: none;
+    }
+    
+    /* Tabs */
+    .tabs {
+      border-bottom: 1px solid var(--border-color);
+      margin-top: var(--spacing-xl);
+    }
+    
+    .tab-nav {
+      display: flex;
+      gap: var(--spacing-lg);
+    }
+    
+    .tab-link {
+      padding: 0.75rem 0;
+      font-weight: 600;
+      color: var(--light-text);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    
+    .tab-link:hover, .tab-link:focus {
+      color: var(--primary-color);
+      outline: none;
+    }
+    
+    .tab-link.active {
+      color: var(--primary-color);
+    }
+    
+    .tab-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--primary-color);
+      border-radius: 3px 3px 0 0;
+    }
+    
+    .tab-content {
+      padding: var(--spacing-lg) 0;
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    /* Reviews */
+    .review {
+      padding: var(--spacing-md) 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .review-author {
+      font-weight: 600;
+    }
+    
+    .review-date {
+      color: var(--light-text);
+      font-size: 0.875rem;
+    }
+    
+    .review-content {
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .review-rating {
+      color: var(--warning-color);
+      font-size: 1rem;
+    }
+    
+    /* Cart Page */
+    .cart-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .cart-table th {
+      text-align: left;
+      padding: var(--spacing-md) 0;
+      border-bottom: 2px solid var(--border-color);
+      font-weight: 600;
+    }
+    
+    .cart-table td {
+      padding: var(--spacing-lg) 0;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: top;
+    }
+    
+    .cart-item-title {
+      font-weight: 600;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .cart-item-detail {
+      font-size: 0.875rem;
+      color: var(--light-text);
+      margin-bottom: var(--spacing-xs);
+    }
+    
+    .remove-item {
+      color: var(--danger-color);
+      font-size: 0.875rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      margin-top: var(--spacing-sm);
+    }
+    
+    .remove-item:hover, .remove-item:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+    
+    .cart-totals {
+      margin-top: var(--spacing-xl);
+      border-top: 1px solid var(--border-color);
+      padding-top: var(--spacing-lg);
+    }
+    
+    .cart-totals h2 {
+      font-size: 1.5rem;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .cart-totals-table {
+      width: 100%;
+      max-width: 400px;
+      margin-left: auto;
+    }
+    
+    .cart-totals-table tr:not(:last-child) {
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .cart-totals-table td {
+      padding: 0.75rem 0;
+    }
+    
+    .cart-total-label {
+      font-weight: 600;
+    }
+    
+    .cart-total-amount {
+      text-align: right;
+    }
+    
+    .cart-total-grand {
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+    
+    /* Coupon Section */
+    .coupon-section {
+      display: flex;
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+      align-items: center;
+    }
+    
+    .coupon-input {
+      flex: 1;
+      max-width: 300px;
+      padding: 0.75rem 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    
+    .coupon-btn {
+      padding: 0.75rem 1.5rem;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .coupon-btn:hover, .coupon-btn:focus {
+      background-color: #0f06b0;
+      outline: none;
+    }
+    
+    /* Success Page */
+    .success-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      padding: var(--spacing-xl);
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .success-icon {
+      width: 80px;
+      height: 80px;
+      background-color: var(--secondary-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--spacing-lg);
+    }
+    
+    .success-icon i {
+      color: white;
+      font-size: 2.5rem;
+    }
+    
+    .success-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: var(--spacing-md);
+      color: var(--primary-color);
+    }
+    
+    .success-message {
+      font-size: 1.1rem;
+      color: var(--dark-text);
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .order-details {
+      background-color: rgba(243, 244, 246, 0.5);
+      border-radius: 8px;
+      padding: var(--spacing-lg);
+      margin-bottom: var(--spacing-xl);
+      text-align: left;
+    }
+    
+    .order-details h3 {
+      font-weight: 600;
+      margin-bottom: var(--spacing-md);
+      font-size: 1.25rem;
+    }
+    
+    .order-detail {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+    
+    .order-detail-label {
+      color: var(--light-text);
+    }
+    
+    .order-detail-value {
+      font-weight: 600;
+    }
+    
+    .delivery-info {
+      color: var(--light-text);
+      margin-bottom: var(--spacing-xl);
+      font-size: 0.875rem;
+    }
+    
+    /* Footer */
+    .footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: var(--spacing-xl) var(--spacing-md);
+      text-align: center;
+      margin-top: 3rem;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-lg);
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .footer-link {
+      color: white;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+    
+    .footer-link:hover, .footer-link:focus {
+      opacity: 0.8;
+      outline: none;
+    }
+    
+    .footer-text {
+      font-size: 0.875rem;
+      opacity: 0.8;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        padding: var(--spacing-md);
+      }
+      
+      nav.nav {
+        margin-top: var(--spacing-md);
+        width: 100%;
+        justify-content: space-around;
+      }
+      
+      .size-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      }
+      
+      .product-title {
+        font-size: 1.5rem;
+      }
+      
+      .cart-table th, 
+      .cart-table td {
+        padding: var(--spacing-md) 0;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .network-selector {
+        gap: var(--spacing-xs);
+      }
+      
+      .network-btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.875rem;
+      }
+      
+      .size-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .tab-nav {
+        gap: var(--spacing-md);
+        font-size: 0.875rem;
+      }
+      
+      .footer-links {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+      }
+    }
+
+    /* Accessibility Focus Styles */
+    a:focus, button:focus, input:focus, select:focus, textarea:focus {
+      outline: 2px solid var(--primary-color);
+      outline-offset: 2px;
+    }
+
+    /* Print Styles */
+    @media print {
+      .header, .footer, .notification-banner {
+        display: none;
+      }
+      .success-card {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Notification Banner -->
+  <div class="notification-banner">
+    <span id="support-message">🚀 We're open! For support call <a href="tel:0592867090" style="color: white; text-decoration: underline;">059 286 7090</a> or WhatsApp <a href="https://wa.me/233592867090" style="color: white; text-decoration: underline;">059 286 7090</a></span>
+    <button class="close-btn" aria-label="Close notification">&times;</button>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="#" class="logo-container" id="home-link">
+      <img src="legend-logo.png" alt="Legend Affordable Data Logo" class="logo-img">
+      <h1 class="logo-text">Legend Affordable Data</h1>
+    </a>
+    
+    <nav class="nav">
+      <a href="#" class="nav-link active" id="products-link" aria-current="page">
+        <i class="fas fa-mobile-alt nav-icon" aria-hidden="true"></i> Products
+      </a>
+      <a href="#" class="nav-link" id="cart-link">
+        <i class="fas fa-shopping-cart nav-icon" aria-hidden="true"></i> Cart
+        <span class="cart-count" aria-live="polite">0</span>
+      </a>
+      <a href="#" class="nav-link" id="account-link">
+        <i class="fas fa-user nav-icon" aria-hidden="true"></i> Account
+      </a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Product Page -->
+    <div id="product-page" class="page active">
+      <div class="product-card">
+        <!-- Network Selector -->
+        <div class="network-selector">
+          <button class="network-btn telecel active" data-network="telecel" aria-pressed="true">
+            <i class="fas fa-wifi" aria-hidden="true"></i> Telecel
+          </button>
+        </div>
+        
+        <h1 class="product-title">Telecel Data Bundles</h1>
+        <p class="product-price-range">GH₵32.00 – GH₵210.00</p>
+        
+        <!-- Data Size Selection -->
+        <div class="size-selection">
+          <h2 class="size-title">Select Data Size <span class="required-star">*</span></h2>
+          <div class="size-grid">
+            <button class="size-btn" data-size="5GB" data-price="32" data-validity="non-expiry" aria-label="Select 5GB data bundle for GH₵32">
+              5GB
+            </button>
+            <button class="size-btn" data-size="10GB" data-price="56" data-validity="non-expiry" aria-label="Select 10GB data bundle for GH₵56">
+              10GB
+            </button>
+            <button class="size-btn" data-size="15GB" data-price="70" data-validity="non-expiry" aria-label="Select 15GB data bundle for GH₵70">
+              15GB
+            </button>
+            <button class="size-btn" data-size="20GB" data-price="95" data-validity="non-expiry" aria-label="Select 20GB data bundle for GH₵95">
+              20GB
+            </button>
+            <button class="size-btn" data-size="25GB" data-price="115" data-validity="non-expiry" aria-label="Select 25GB data bundle for GH₵115">
+              25GB
+            </button>
+            <button class="size-btn" data-size="30GB" data-price="135" data-validity="non-expiry" aria-label="Select 30GB data bundle for GH₵135">
+              30GB
+            </button>
+            <button class="size-btn" data-size="40GB" data-price="170" data-validity="non-expiry" aria-label="Select 40GB data bundle for GH₵170">
+              40GB
+            </button>
+            <button class="size-btn" data-size="50GB" data-price="210" data-validity="non-expiry" aria-label="Select 50GB data bundle for GH₵210">
+              50GB
+            </button>
+          </div>
+          <p id="size-error" class="error-message" role="alert">Please select a data size</p>
+        </div>
+        
+        <!-- Price Display -->
+        <div class="price-display">
+          <p class="price-amount">GH₵<span id="selected-price">32.00</span></p>
+          <p class="delivery-time">Delivery time: 5 minutes to 4 hours</p>
+          <p class="delivery-time">Validity: <span id="selected-validity">non-expiry</span></p>
+        </div>
+        
+        <!-- Phone Number Input -->
+        <div class="form-group">
+          <label for="phone-number" class="form-label">Recipient Phone Number <span class="required-star">*</span></label>
+          <div class="phone-input-group">
+            <span class="phone-prefix">+233</span>
+            <input type="tel" id="phone-number" class="phone-input" placeholder="e.g. 501234567" maxlength="9" required
+                   aria-describedby="phone-error" inputmode="numeric" pattern="[0-9]{9}">
+          </div>
+          <p id="phone-error" class="error-message" role="alert">Please enter a valid Ghanaian phone number (e.g. 501234567)</p>
+        </div>
+        
+        <!-- Buy Button -->
+        <button id="buy-now-btn" class="action-btn btn-primary" disabled aria-disabled="true">
+          <i class="fas fa-bolt" style="margin-right: 8px;" aria-hidden="true"></i> BUY NOW
+        </button>
+        
+        <!-- Product Info Tabs -->
+        <div class="tabs">
+          <nav class="tab-nav" role="tablist">
+            <a href="#description" class="tab-link active" data-tab="description" role="tab" aria-selected="true" aria-controls="description">Description</a>
+            <a href="#validity" class="tab-link" data-tab="validity" role="tab" aria-selected="false" aria-controls="validity">Validity</a>
+            <a href="#reviews" class="tab-link" data-tab="reviews" role="tab" aria-selected="false" aria-controls="reviews">Reviews (24)</a>
+          </nav>
+        </div>
+        
+        <!-- Tab Contents -->
+        <div id="description" class="tab-content active" role="tabpanel" aria-labelledby="description-tab">
+          <p>Purchase affordable Telecel data bundles with instant delivery to any Ghanaian number. Our bundles offer the best value for money with competitive prices and reliable service.</p>
+          <p style="margin-top: 0.5rem;">To purchase:</p>
+          <ol style="padding-left: 1.5rem; list-style-type: decimal; margin-top: 0.5rem;">
+            <li>Select your preferred data size</li>
+            <li>Enter the recipient's phone number</li>
+            <li>Click "Buy Now" and complete payment</li>
+            <li>Receive your data within minutes</li>
+          </ol>
+        </div>
+        
+        <div id="validity" class="tab-content" role="tabpanel" aria-labelledby="validity-tab" hidden>
+          <h3 style="font-weight: bold; margin-bottom: 0.5rem;">Bundle Validity Periods:</h3>
+          <ul style="padding-left: 1.5rem; list-style-type: disc; margin-top: 0.5rem;">
+            <li><strong>1GB-2GB:</strong> 7 days validity</li>
+            <li><strong>3GB-50GB:</strong> 30 days validity</li>
+            <li><strong>100GB:</strong> 90 days validity</li>
+          </ul>
+          <p style="margin-top: 0.75rem; font-size: 0.875rem; color: var(--light-text);">Note: Validity begins immediately after bundle is credited to your number.</p>
+        </div>
+        
+        <div id="reviews" class="tab-content" role="tabpanel" aria-labelledby="reviews-tab" hidden>
+          <div style="margin-bottom: 1.5rem;">
+            <!-- Review 1 -->
+            <div class="review">
+              <div class="review-header">
+                <span class="review-author">Kwame Asante</span>
+                <span class="review-date">March 15, 2025</span>
+              </div>
+              <p class="review-content">"Very fast delivery! Got my 5GB bundle in under 2 minutes. Will definitely buy again."</p>
+              <div class="review-rating" aria-label="5 star rating">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+              </div>
+            </div>
+            
+            <!-- Review 2 -->
+            <div class="review">
+              <div class="review-header">
+                <span class="review-author">Ama Serwaa</span>
+                <span class="review-date">March 10, 2025</span>
+              </div>
+              <p class="review-content">"Good prices compared to other vendors. The 10GB bundle lasted me the whole month."</p>
+              <div class="review-rating" aria-label="4.5 star rating">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+              </div>
+            </div>
+            
+            <!-- Review 3 -->
+            <div class="review">
+              <div class="review-header">
+                <span class="review-author">Yaw Mensah</span>
+                <span class="review-date">February 28, 2025</span>
+              </div>
+              <p class="review-content">"Had an issue with my purchase but customer service was very helpful and resolved it quickly."</p>
+              <div class="review-rating" aria-label="5 star rating">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          
+          <button class="action-btn btn-secondary" style="margin-top: 1.5rem;">
+            <i class="fas fa-plus" style="margin-right: 8px;" aria-hidden="true"></i> LOAD MORE REVIEWS
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Cart Page -->
+    <div id="cart-page" class="page">
+      <div class="product-card">
+        <h1 class="product-title">Your Cart</h1>
+        
+        <!-- Cart Items -->
+        <div style="overflow-x: auto;">
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th scope="col">PRODUCT</th>
+                <th scope="col">TOTAL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="cart-item-title">Telecel Data Bundle</div>
+                  <div class="cart-item-detail">Size: <span id="cart-data-size">1GB</span></div>
+                  <div class="cart-item-detail">Phone: +233<span id="cart-phone-number">501234567</span></div>
+                  <div class="cart-item-detail">Validity: <span id="cart-validity">7 days</span></div>
+                  <button class="remove-item" id="remove-item" aria-label="Remove item from cart">
+                    <i class="fas fa-trash-alt" style="margin-right: 4px;" aria-hidden="true"></i> Remove
+                  </button>
+                </td>
+                <td style="font-weight: bold;">GH₵<span id="cart-price">32.00</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <!-- Coupon Section -->
+        <div class="coupon-section">
+          <input type="text" class="coupon-input" placeholder="Coupon code" aria-label="Enter coupon code">
+          <button class="coupon-btn">APPLY</button>
+        </div>
+        
+        <!-- Cart Totals -->
+        <div class="cart-totals">
+          <h2>Cart Totals</h2>
+          <table class="cart-totals-table">
+            <tr>
+              <td class="cart-total-label">Subtotal</td>
+              <td class="cart-total-amount">GH₵<span id="cart-subtotal">32.00</span></td>
+            </tr>
+            <tr>
+              <td class="cart-total-label">Discount</td>
+              <td class="cart-total-amount">-GH₵<span id="cart-discount">0.00</span></td>
+            </tr>
+            <tr>
+              <td class="cart-total-label cart-total-grand">Total</td>
+              <td class="cart-total-amount cart-total-grand">GH₵<span id="cart-total">32.00</span></td>
+            </tr>
+          </table>
+          
+          <!-- Checkout Button -->
+          <button id="proceed-checkout-btn" class="action-btn btn-primary" style="margin-top: 1.5rem;">
+            PROCEED TO CHECKOUT
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Checkout Page -->
+    <div id="checkout-page" class="page">
+      <div class="success-card">
+        <div class="success-icon">
+          <i class="fas fa-check" aria-hidden="true"></i>
+        </div>
+        
+        <h1 class="success-title">Order Successful!</h1>
+        <p class="success-message">Your Telecel data bundle purchase has been completed successfully.</p>
+        
+        <div class="order-details">
+          <h3>Order Details</h3>
+          <div class="order-detail">
+            <span class="order-detail-label">Product:</span>
+            <span class="order-detail-value" id="success-product">Telecel Data Bundle</span>
+          </div>
+          <div class="order-detail">
+            <span class="order-detail-label">Data Size:</span>
+            <span class="order-detail-value" id="success-size">5GB</span>
+          </div>
+          <div class="order-detail">
+            <span class="order-detail-label">Phone Number:</span>
+            <span class="order-detail-value">+233<span id="success-phone">501234567</span></span>
+          </div>
+          <div class="order-detail">
+            <span class="order-detail-label">Amount Paid:</span>
+            <span class="order-detail-value" id="success-amount">GH₵32.00</span>
+          </div>
+          <div class="order-detail">
+            <span class="order-detail-label">Order Number:</span>
+            <span class="order-detail-value" id="success-order-number">DHG-20250315-001</span>
+          </div>
+          <div class="order-detail">
+            <span class="order-detail-label">Date:</span>
+            <span class="order-detail-value" id="success-date">March 15, 2025 14:30</span>
+          </div>
+        </div>
+        
+        <p class="delivery-info">Your data bundle will be delivered to +233<span id="delivery-phone">501234567</span> within 5 minutes to 4 hours. You'll receive an SMS confirmation from Telecel.</p>
+        
+        <button id="back-to-home" class="action-btn btn-primary">
+          <i class="fas fa-home" style="margin-right: 8px;" aria-hidden="true"></i> BACK TO HOME
+        </button>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#" class="footer-link">About Us</a>
+      <a href="#" class="footer-link">Contact</a>
+      <a href="#" class="footer-link">Terms of Service</a>
+      <a href="#" class="footer-link">Privacy Policy</a>
+    </div>
+    <p class="footer-text">© 2025 Legend Affordable Data. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // DOM Elements
+      const pages = {
+        product: document.getElementById('product-page'),
+        cart: document.getElementById('cart-page'),
+        checkout: document.getElementById('checkout-page')
+      };
+      
+      const navLinks = {
+        products: document.getElementById('products-link'),
+        cart: document.getElementById('cart-link'),
+        account: document.getElementById('account-link')
+      };
+      
+      const homeLink = document.getElementById('home-link');
+      const backToHomeBtn = document.getElementById('back-to-home');
+      const buyNowBtn = document.getElementById('buy-now-btn');
+      const proceedCheckoutBtn = document.getElementById('proceed-checkout-btn');
+      const removeItemBtn = document.getElementById('remove-item');
+      const closeNotificationBtn = document.querySelector('.notification-banner .close-btn');
+      
+      // Form elements
+      const sizeButtons = document.querySelectorAll('.size-btn');
+      const phoneInput = document.getElementById('phone-number');
+      const sizeError = document.getElementById('size-error');
+      const phoneError = document.getElementById('phone-error');
+      
+      // Price display elements
+      const selectedPriceEl = document.getElementById('selected-price');
+      const selectedValidityEl = document.getElementById('selected-validity');
+      
+      // Cart elements
+      const cartCountEl = document.querySelector('.cart-count');
+      const cartDataSizeEl = document.getElementById('cart-data-size');
+      const cartPhoneNumberEl = document.getElementById('cart-phone-number');
+      const cartValidityEl = document.getElementById('cart-validity');
+      const cartPriceEl = document.getElementById('cart-price');
+      const cartSubtotalEl = document.getElementById('cart-subtotal');
+      const cartDiscountEl = document.getElementById('cart-discount');
+      const cartTotalEl = document.getElementById('cart-total');
+      
+      // Success page elements
+      const successProductEl = document.getElementById('success-product');
+      const successSizeEl = document.getElementById('success-size');
+      const successPhoneEl = document.getElementById('success-phone');
+      const successAmountEl = document.getElementById('success-amount');
+      const successOrderNumberEl = document.getElementById('success-order-number');
+      const successDateEl = document.getElementById('success-date');
+      const deliveryPhoneEl = document.getElementById('delivery-phone');
+
+      // Tab elements
+      const tabLinks = document.querySelectorAll('.tab-link');
+      const tabContents = document.querySelectorAll('.tab-content');
+
+      // Current selection state
+      let currentSelection = {
+        size: null,
+        price: null,
+        validity: null,
+        phone: null
+      };
+
+      // Cart state
+      let cart = {
+        items: [],
+        coupon: null,
+        discount: 0
+      };
+
+      // Initialize the page
+      function init() {
+        // Load saved state
+        loadState();
+        
+        // Set up event listeners
+        setupEventListeners();
+        
+        // Update the current date on success page
+        updateSuccessDate();
+        
+        // Initialize tabs
+        showTab('description');
+      }
+
+      // Set up all event listeners
+      function setupEventListeners() {
+        // Navigation links
+        navLinks.products.addEventListener('click', (e) => {
+          e.preventDefault();
+          showPage('product');
+          setActiveNavLink('products');
+        });
+
+        navLinks.cart.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (cart.items.length > 0) {
+            showPage('cart');
+            setActiveNavLink('cart');
+          } else {
+            showPage('product');
+            setActiveNavLink('products');
+          }
+        });
+
+        navLinks.account.addEventListener('click', (e) => {
+          e.preventDefault();
+          alert('Account page would show here');
+        });
+
+        homeLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          showPage('product');
+          setActiveNavLink('products');
+        });
+
+        backToHomeBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          showPage('product');
+          setActiveNavLink('products');
+          resetForm();
+        });
+
+        // Size selection buttons
+        sizeButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            selectSize(button);
+          });
+          button.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              selectSize(button);
+            }
+          });
+        });
+
+        // Phone number input validation
+        phoneInput.addEventListener('input', validatePhoneNumber);
+        phoneInput.addEventListener('blur', validatePhoneNumber);
+
+        // Buy now button
+        buyNowBtn.addEventListener('click', addToCart);
+
+        // Proceed to checkout button
+        proceedCheckoutBtn.addEventListener('click', proceedToCheckout);
+
+        // Remove item button
+        removeItemBtn.addEventListener('click', removeFromCart);
+
+        // Close notification button
+        closeNotificationBtn.addEventListener('click', closeNotification);
+
+        // Tab links
+        tabLinks.forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const tabId = link.getAttribute('data-tab');
+            showTab(tabId);
+            setActiveTabLink(link);
+          });
+        });
+      }
+
+      // Show a specific page and hide others
+      function showPage(pageName) {
+        Object.keys(pages).forEach(key => {
+          if (key === pageName) {
+            pages[key].classList.add('active');
+            pages[key].removeAttribute('hidden');
+          } else {
+            pages[key].classList.remove('active');
+            pages[key].setAttribute('hidden', 'true');
+          }
+        });
+      }
+
+      // Set active navigation link
+      function setActiveNavLink(linkName) {
+        Object.keys(navLinks).forEach(key => {
+          if (key === linkName) {
+            navLinks[key].classList.add('active');
+            navLinks[key].setAttribute('aria-current', 'page');
+          } else {
+            navLinks[key].classList.remove('active');
+            navLinks[key].removeAttribute('aria-current');
+          }
+        });
+      }
+
+      // Select a data size
+      function selectSize(button) {
+        // Remove selected class from all buttons
+        sizeButtons.forEach(btn => {
+          btn.classList.remove('selected');
+          btn.setAttribute('aria-pressed', 'false');
+        });
+
+        // Add selected class to clicked button
+        button.classList.add('selected');
+        button.setAttribute('aria-pressed', 'true');
+
+        // Update current selection
+        currentSelection.size = button.getAttribute('data-size');
+        currentSelection.price = button.getAttribute('data-price');
+        currentSelection.validity = button.getAttribute('data-validity');
+
+        // Update price display
+        selectedPriceEl.textContent = parseFloat(currentSelection.price).toFixed(2);
+        selectedValidityEl.textContent = currentSelection.validity === 'non-expiry' ? 'Non-expiry' : currentSelection.validity + ' days';
+
+        // Hide size error if shown
+        sizeError.style.display = 'none';
+
+        // Enable buy button if phone is valid
+        if (validatePhoneNumber()) {
+          buyNowBtn.disabled = false;
+          buyNowBtn.setAttribute('aria-disabled', 'false');
+        }
+
+        // Save selection
+        saveState();
+      }
+
+      // Validate phone number
+      function validatePhoneNumber() {
+        const phoneNumber = phoneInput.value.trim();
+        // More comprehensive Ghana phone regex
+        const ghanaPhoneRegex = /^(?:0|233|\+233)?(20|24|25|26|27|28|29|30|50|54|55|56|57|59)[0-9]{7}$/;
+
+        if (phoneNumber.length === 9 && ghanaPhoneRegex.test(phoneNumber)) {
+          phoneError.style.display = 'none';
+          currentSelection.phone = phoneNumber;
+          
+          // Enable buy button if size is selected
+          if (currentSelection.size) {
+            buyNowBtn.disabled = false;
+            buyNowBtn.setAttribute('aria-disabled', 'false');
+          }
+          
+          // Save phone number
+          saveState();
+          return true;
+        } else {
+          phoneError.style.display = 'block';
+          buyNowBtn.disabled = true;
+          buyNowBtn.setAttribute('aria-disabled', 'true');
+          return false;
+        }
+      }
+
+      // Add item to cart
+      function addToCart() {
+        // Validate form
+        if (!currentSelection.size) {
+          sizeError.style.display = 'block';
+          return;
+        }
+
+        if (!validatePhoneNumber()) {
+          return;
+        }
+
+        // Create cart item
+        const cartItem = {
+          product: 'Telecel Data Bundle',
+          size: currentSelection.size,
+          price: parseFloat(currentSelection.price),
+          phone: currentSelection.phone,
+          validity: currentSelection.validity === 'non-expiry' ? 'Non-expiry' : currentSelection.validity + ' days'
+        };
+
+        // Add to cart (in a real app, you might allow multiple items)
+        cart.items = [cartItem];
+        saveState();
+
+        // Update cart display
+        updateCartDisplay();
+
+        // Show cart page
+        showPage('cart');
+        setActiveNavLink('cart');
+
+        // Update cart count
+        updateCartCount();
+      }
+
+      // Remove item from cart
+      function removeFromCart() {
+        cart.items = [];
+        saveState();
+        updateCartCount();
+        showPage('product');
+        setActiveNavLink('products');
+      }
+
+      // Update cart display
+      function updateCartDisplay() {
+        if (cart.items.length > 0) {
+          const item = cart.items[0];
+          cartDataSizeEl.textContent = item.size;
+          cartPhoneNumberEl.textContent = item.phone;
+          cartValidityEl.textContent = item.validity;
+          cartPriceEl.textContent = item.price.toFixed(2);
+          cartSubtotalEl.textContent = item.price.toFixed(2);
+          cartTotalEl.textContent = (item.price - cart.discount).toFixed(2);
+        }
+      }
+
+      // Update cart count in navigation
+      function updateCartCount() {
+        const count = cart.items.length;
+        cartCountEl.textContent = count;
+        // Update ARIA live region
+        if (count > 0) {
+          const message = count === 1 ? '1 item in cart' : `${count} items in cart`;
+          const ariaLive = document.createElement('div');
+          ariaLive.setAttribute('aria-live', 'polite');
+          ariaLive.style.position = 'absolute';
+          ariaLive.style.overflow = 'hidden';
+          ariaLive.style.clip = 'rect(0 0 0 0)';
+          ariaLive.style.height = '1px';
+          ariaLive.style.width = '1px';
+          ariaLive.style.margin = '-1px';
+          ariaLive.style.padding = '0';
+          ariaLive.style.border = '0';
+          ariaLive.textContent = message;
+          document.body.appendChild(ariaLive);
+          setTimeout(() => {
+            document.body.removeChild(ariaLive);
+          }, 1000);
+        }
+      }
+
+      // Proceed to checkout
+      function proceedToCheckout() {
+        if (cart.items.length === 0) return;
+
+        // In a real app, this would process payment
+        // For demo, we'll just show the success page
+        
+        // Update success page with order details
+        const item = cart.items[0];
+        successProductEl.textContent = item.product;
+        successSizeEl.textContent = item.size;
+        successPhoneEl.textContent = item.phone;
+        successAmountEl.textContent = 'GH₵' + item.price.toFixed(2);
+        deliveryPhoneEl.textContent = item.phone;
+        
+        // Generate a random order number
+        const now = new Date();
+        const orderNumber = 'ORD-' + now.getFullYear() + 
+                          padZero(now.getMonth() + 1) + 
+                          padZero(now.getDate()) + '-' + 
+                          Math.floor(1000 + Math.random() * 9000);
+        successOrderNumberEl.textContent = orderNumber;
+        
+        // Show success page
+        showPage('checkout');
+        setActiveNavLink('checkout');
+      }
+
+      // Helper function to pad numbers with leading zero
+      function padZero(num) {
+        return num < 10 ? '0' + num : num;
+      }
+
+      // Update the success page date
+      function updateSuccessDate() {
+        const now = new Date();
+        const options = { 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        };
+        successDateEl.textContent = now.toLocaleDateString('en-US', options);
+      }
+
+      // Reset the form
+      function resetForm() {
+        // Reset size selection
+        sizeButtons.forEach(btn => {
+          btn.classList.remove('selected');
+          btn.setAttribute('aria-pressed', 'false');
+        });
+        currentSelection.size = null;
+        sizeError.style.display = 'none';
+
+        // Reset phone input
+        phoneInput.value = '';
+        currentSelection.phone = null;
+        phoneError.style.display = 'none';
+
+        // Reset price display
+        selectedPriceEl.textContent = '0.00';
+        selectedValidityEl.textContent = '';
+
+        // Disable buy button
+        buyNowBtn.disabled = true;
+        buyNowBtn.setAttribute('aria-disabled', 'true');
+
+        // Clear cart
+        cart.items = [];
+        saveState();
+        updateCartCount();
+      }
+
+      // Close notification banner
+      function closeNotification() {
+        const banner = document.querySelector('.notification-banner');
+        banner.style.display = 'none';
+        localStorage.setItem('notificationClosed', 'true');
+      }
+
+      // Show tab content
+      function showTab(tabId) {
+        tabContents.forEach(content => {
+          if (content.id === tabId) {
+            content.classList.add('active');
+            content.removeAttribute('hidden');
+          } else {
+            content.classList.remove('active');
+            content.setAttribute('hidden', 'true');
+          }
+        });
+      }
+
+      // Set active tab link
+      function setActiveTabLink(activeLink) {
+        tabLinks.forEach(link => {
+          if (link === activeLink) {
+            link.classList.add('active');
+            link.setAttribute('aria-selected', 'true');
+          } else {
+            link.classList.remove('active');
+            link.setAttribute('aria-selected', 'false');
+          }
+        });
+      }
+
+      // Save state to localStorage
+      function saveState() {
+        try {
+          localStorage.setItem('cart', JSON.stringify(cart));
+          localStorage.setItem('selection', JSON.stringify(currentSelection));
+        } catch (e) {
+          console.error('Failed to save state:', e);
+        }
+      }
+
+      // Load state from localStorage
+      function loadState() {
+        try {
+          const savedCart = localStorage.getItem('cart');
+          if (savedCart) {
+            cart = JSON.parse(savedCart);
+            updateCartCount();
+          }
+          
+          const savedSelection = localStorage.getItem('selection');
+          if (savedSelection) {
+            currentSelection = JSON.parse(savedSelection);
+            
+            // Restore selected size
+            if (currentSelection.size) {
+              const selectedBtn = Array.from(sizeButtons).find(btn => 
+                btn.getAttribute('data-size') === currentSelection.size
+              );
+              if (selectedBtn) {
+                selectedBtn.classList.add('selected');
+                selectedBtn.setAttribute('aria-pressed', 'true');
+                selectedPriceEl.textContent = parseFloat(currentSelection.price).toFixed(2);
+                selectedValidityEl.textContent = currentSelection.validity === 'non-expiry' ? 'Non-expiry' : currentSelection.validity + ' days';
+              }
+            }
+            
+            // Restore phone number
+            if (currentSelection.phone) {
+              phoneInput.value = currentSelection.phone;
+              if (currentSelection.size) {
+                buyNowBtn.disabled = false;
+                buyNowBtn.setAttribute('aria-disabled', 'false');
+              }
+            }
+          }
+          
+          // Check if notification was closed
+          if (localStorage.getItem('notificationClosed') === 'true') {
+            closeNotification();
+          }
+        } catch (e) {
+          console.error('Failed to load state:', e);
+        }
+      }
+
+      // Initialize the app
+      init();
+    });
+  </script>
+</body>
+</html>
